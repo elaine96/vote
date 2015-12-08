@@ -3,7 +3,7 @@
 <head>
    <title>古风</title>
    <meta charset="utf8">
-   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" type="text/css" href="css/css.css">
    <script src="js/jquery.min.js"></script>

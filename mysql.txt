@@ -1,0 +1,6 @@
+create table vote(
+	id int primary key auto_increment,
+	name varchar(32) not null,
+	vote_id int(4) not null,
+	num int(4) not null
+)default charset=utf8;

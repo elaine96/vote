@@ -87,12 +87,51 @@
          </ul>
       </div>
    </nav>
-   <div>
-      <img src="img/mmqm.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200">
-      <form class="form-inline">
-         <input type="submit" name="vote" value="投票" class="button" />
-         <input type="submit" name="info" value="详情" class="button" />
-      </form>
+   <h1 style="color:#3399FF;font-family:楷体">最喜欢的古风音乐社团</h1>
+   <div style="float:left;margin-left:40px;">
+      <img src="img/mmqm.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+      <table>
+         <td>
+            <tr><form class="form-inline" action="voteHandle.php"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><a href="http://www.mymmqm.com/" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+         </td>
+      </table>
    </div>
+   <div style="float:left;margin-left:40px;">
+      <img src="img/lsqs.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+      <table>
+         <td>
+            <tr><form class="form-inline" action="voteHandle.php"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><a href="http://baike.baidu.com/subview/931275/11100977.htm#viewPageContent" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+         </td>
+      </table> 
+   </div>
+   <div style="float:left;margin-left:40px;">
+      <img src="img/lyqh.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+      <table>
+         <td>
+            <tr><form class="form-inline" action="voteHandle.php"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><a href="http://baike.baidu.com/view/3045308.htm" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+         </td>
+      </table>
+   </div>
+   <div style="float:left;margin-left:40px;">
+      <img src="img/psly.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+      <table>
+         <td>
+            <tr><form class="form-inline" action="voteHandle.php"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><a href="http://www.oyinyue.com/11610574" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+         </td>
+      </table>
+   </div>
+   <!--<div style="float:left;margin-left:20px;">
+      <img src="img/lyg.jpg" class="img-rounded" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+      <table>
+         <td>
+            <tr><form class="form-inline"><input type="submit" name="vote" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><a href="http://www.mymmqm.com/" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+         </td>
+      </table>
+   </div>-->
 </body>
 </html>

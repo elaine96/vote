@@ -92,7 +92,7 @@
       <img src="img/mmqm.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
       <table>
          <td>
-            <tr><form class="form-inline" action="voteHandle.php"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><form class="form-inline" action="voteHandle.php?vote_id=1" method="post"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
             <tr><a href="http://www.mymmqm.com/" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
          </td>
       </table>
@@ -101,7 +101,7 @@
       <img src="img/lsqs.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
       <table>
          <td>
-            <tr><form class="form-inline" action="voteHandle.php"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><form class="form-inline" action="voteHandle.php?vote_id=2" method="post"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
             <tr><a href="http://baike.baidu.com/subview/931275/11100977.htm#viewPageContent" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
          </td>
       </table> 
@@ -110,7 +110,7 @@
       <img src="img/lyqh.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
       <table>
          <td>
-            <tr><form class="form-inline" action="voteHandle.php"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><form class="form-inline" action="voteHandle.php?vote_id=3" method="post"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
             <tr><a href="http://baike.baidu.com/view/3045308.htm" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
          </td>
       </table>
@@ -119,7 +119,7 @@
       <img src="img/psly.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
       <table>
          <td>
-            <tr><form class="form-inline" action="voteHandle.php"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
+            <tr><form class="form-inline" action="voteHandle.php?vote_id=4" method="post"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
             <tr><a href="http://www.oyinyue.com/11610574" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
          </td>
       </table>

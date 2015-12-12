@@ -5,7 +5,7 @@
 	$name=$_SESSION['name'];
 	mysql_select_db('elaine');
 	mysql_query("set names utf8");
-	$sql="update vote set name='$name' where vote_id='$vote_id'";
+	$sql="update vote set num=num+1,name=concat('$name,',name) where vote_id=$vote_id";
 	$rs=mysql_query($sql);
 	if($rs)
 	{

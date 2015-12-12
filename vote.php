@@ -87,42 +87,87 @@
          </ul>
       </div>
    </nav>
-   <h1 style="color:#3399FF;font-family:楷体">最喜欢的古风音乐社团</h1>
-   <div style="float:left;margin-left:40px;">
-      <img src="img/mmqm.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
-      <table>
-         <td>
-            <tr><form class="form-inline" action="voteHandle.php?vote_id=1" method="post"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
-            <tr><a href="http://www.mymmqm.com/" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
-         </td>
-      </table>
-   </div>
-   <div style="float:left;margin-left:40px;">
-      <img src="img/lsqs.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
-      <table>
-         <td>
-            <tr><form class="form-inline" action="voteHandle.php?vote_id=2" method="post"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
-            <tr><a href="http://baike.baidu.com/subview/931275/11100977.htm#viewPageContent" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
-         </td>
-      </table> 
-   </div>
-   <div style="float:left;margin-left:40px;">
-      <img src="img/lyqh.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
-      <table>
-         <td>
-            <tr><form class="form-inline" action="voteHandle.php?vote_id=3" method="post"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
-            <tr><a href="http://baike.baidu.com/view/3045308.htm" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
-         </td>
-      </table>
-   </div>
-   <div style="float:left;margin-left:40px;">
-      <img src="img/psly.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
-      <table>
-         <td>
-            <tr><form class="form-inline" action="voteHandle.php?vote_id=4" method="post"><input type="submit" name="vote_id" value="投票" class="button" style="margin-left:20px"/></form></tr>
-            <tr><a href="http://www.oyinyue.com/11610574" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
-         </td>
-      </table>
+   <div>
+      <h1 style="color:#3399FF;font-family:楷体">最喜欢的古风音乐社团</h1>
+      <div style="float:left;margin-left:40px;">
+         <img src="img/mmqm.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+         <table>
+            <td>
+               <tr><form class="form-inline" action="voteHandle.php" method="post">
+               <button type="submit" name="vote_id" value="1" class="button" style="margin-left:20px"/>投票</button></form></tr>
+               <tr><a href="http://www.mymmqm.com/" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+            </td>
+         </table>
+      </div>
+      <div style="float:left;margin-left:40px;">
+         <img src="img/lsqs.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+         <table>
+            <td>
+               <tr><form class="form-inline" action="voteHandle.php" method="post">
+               <button type="submit" name="vote_id" value="2" class="button" style="margin-left:20px"/>投票</button></form></tr>
+               <tr><a href="http://baike.baidu.com/subview/931275/11100977.htm#viewPageContent" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+            </td>
+         </table> 
+      </div>
+      <div style="float:left;margin-left:40px;">
+         <img src="img/lyqh.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+         <table>
+            <td>
+               <tr><form class="form-inline" action="voteHandle.php" method="post">
+               <button type="submit" name="vote_id" value="3" class="button" style="margin-left:20px"/>投票</button></form></tr>
+               <tr><a href="http://baike.baidu.com/view/3045308.htm" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+            </td>
+         </table>
+      </div>
+      <div style="float:left;margin-left:40px;">
+         <img src="img/psly.jpg" class="img-circle" alt="Cinque Terre" width="200" height="200"><br/><br/>    
+         <table>
+            <td>
+               <tr><form class="form-inline" action="voteHandle.php" method="post">
+               <button type="submit" name="vote_id" value="4" class="button" style="margin-left:20px"/>投票</button></form></tr>
+               <tr><a href="http://www.oyinyue.com/11610574" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
+            </td>
+         </table>
+      </div>
+      </div>
+   <div style="margin-top:400px">
+      <h1>投票结果</h1>
+      <?php
+      $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");      
+      mysql_select_db('elaine');
+      mysql_query("set names utf8");
+      $sql1="select * from vote where vote_id=1";
+      $query1=mysql_query($sql1);
+      $rs1=mysql_fetch_array($query1);
+      ?>
+      <?php
+      $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");      
+      mysql_select_db('elaine');
+      mysql_query("set names utf8");
+      $sql2="select * from vote where vote_id=2";
+      $query2=mysql_query($sql2);
+      $rs2=mysql_fetch_array($query2);
+      ?>
+      <?php
+      $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");     
+      mysql_select_db('elaine');
+      mysql_query("set names utf8");
+      $sql3="select * from vote where vote_id=3";
+      $query3=mysql_query($sql3);
+      $rs3=mysql_fetch_array($query3);
+      ?>
+      <?php
+      $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");    
+      mysql_select_db('elaine');
+      mysql_query("set names utf8");
+      $sql4="select * from vote where vote_id=4";
+      $query4=mysql_query($sql4);
+      $rs4=mysql_fetch_array($query4);
+      ?> 
+      墨明棋妙 <?php echo $rs1['num'];?>票
+      流觞曲水 <?php echo $rs2['num'];?>票
+      流音千回 <?php echo $rs3['num'];?>票
+      平沙落雁 <?php echo $rs4['num'];?>票
    </div>
    <!--<div style="float:left;margin-left:20px;">
       <img src="img/lyg.jpg" class="img-rounded" alt="Cinque Terre" width="200" height="200"><br/><br/>    

@@ -251,14 +251,5 @@
          </div>
       </div>
    </div>
-   <!--<div style="float:left;margin-left:20px;">
-      <img src="img/lyg.jpg" class="img-rounded" alt="Cinque Terre" width="200" height="200"><br/><br/>    
-      <table>
-         <td>
-            <tr><form class="form-inline"><input type="submit" name="vote" value="投票" class="button" style="margin-left:20px"/></form></tr>
-            <tr><a href="http://www.mymmqm.com/" target="_blank"><button class="button" style="margin-right:20px;float:right">详情</button></a></tr>
-         </td>
-      </table>
-   </div>-->
 </body>
 </html>

@@ -61,3 +61,12 @@ a:hover{
 	color: #3399FF;
 	text-decoration: none;
 }
+.progress-bar{
+	background:#3399FF;
+}
+.progress{
+	width:1000px;
+}
+.btn{
+	background: #E5EEF6;
+}

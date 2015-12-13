@@ -26,35 +26,38 @@
 			echo "</script>";
 			echo "<br>";
 		}else{
-			$sql1="insert into user(name,password,email) values ('$name','$password','$email')";
-			$result=mysql_query($sql1);
-			if($password!=$password1){
-				echo "<script language=\"javascript\">";
-				echo "alert(\"密码不一致\");";
-				echo "location.href=\"register.php\"";			
-				echo "</script>";
-				echo "<br>";
-			}
-			if($result){
-				if($_SESSION['code']==$_POST['code']){
+			if($_SESSION['code']==$_POST['code']){
+				$sql1="insert into user(name,password,email) values ('$name','$password','$email')";
+				$result=mysql_query($sql1);
+				if($password!=$password1){
 					echo "<script language=\"javascript\">";
-					echo "alert(\"注册成功！\\n请重新登录！\");";
-					echo "location.href=\"login.php\"";		
-					echo "</script>";
-				}
-				else{
-					echo "<script language=\"javascript\">";
-					echo "alert(\"验证码不正确！\");";
-					echo "location.href=\"register.php\"";
+					echo "alert(\"密码不一致\");";
+					echo "location.href=\"register.php\"";			
 					echo "</script>";
 					echo "<br>";
+				}else{
+					if($result){					
+						echo "<script language=\"javascript\">";
+						echo "alert(\"注册成功！\\n请重新登录！\");";
+						echo "location.href=\"login.php\"";		
+						echo "</script>";
+					}
+					else{
+						echo "<script language=\"javascript\">";
+						echo "alert(\"注册失败！\");";
+						echo "location.href=\"register.php\"";		
+						echo "</script>";
+						echo "<br>";
+					}
 				}
-			}else{
+			}
+			else{
 				echo "<script language=\"javascript\">";
-				echo "alert(\"注册失败！\");";
-				echo "location.href=\"register.php\"";		
+				echo "alert(\"验证码不正确！\");";
+				echo "location.href=\"register.php\"";
 				echo "</script>";
 				echo "<br>";
+				exit();
 			}
 		}		
 	}

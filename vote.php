@@ -130,44 +130,126 @@
          </table>
       </div>
       </div>
-   <div style="margin-top:400px">
+   <div style="margin-top:300px">
       <h1>投票结果</h1>
       <?php
-      $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");      
-      mysql_select_db('elaine');
-      mysql_query("set names utf8");
-      $sql1="select * from vote where vote_id=1";
-      $query1=mysql_query($sql1);
-      $rs1=mysql_fetch_array($query1);
+         $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");      
+         mysql_select_db('elaine');
+         mysql_query("set names utf8");
+         $sql1="select * from vote where vote_id=1";
+         $query1=mysql_query($sql1);
+         $rs1=mysql_fetch_array($query1);
+         $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");      
+         mysql_select_db('elaine');
+         mysql_query("set names utf8");
+         $sql2="select * from vote where vote_id=2";
+         $query2=mysql_query($sql2);
+         $rs2=mysql_fetch_array($query2);
+         $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");     
+         mysql_select_db('elaine');
+         mysql_query("set names utf8");
+         $sql3="select * from vote where vote_id=3";
+         $query3=mysql_query($sql3);
+         $rs3=mysql_fetch_array($query3);
+         $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");    
+         mysql_select_db('elaine');
+         mysql_query("set names utf8");
+         $sql4="select * from vote where vote_id=4";
+         $query4=mysql_query($sql4);
+         $rs4=mysql_fetch_array($query4);
+         $num1=$rs1['num']/($rs1['num']+$rs2['num']+$rs3['num']+$rs4['num']);
+         $num2=$rs2['num']/($rs1['num']+$rs2['num']+$rs3['num']+$rs4['num']);
+         $num3=$rs3['num']/($rs1['num']+$rs2['num']+$rs3['num']+$rs4['num']);
+         $num4=$rs4['num']/($rs1['num']+$rs2['num']+$rs3['num']+$rs4['num']);
       ?>
-      <?php
-      $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");      
-      mysql_select_db('elaine');
-      mysql_query("set names utf8");
-      $sql2="select * from vote where vote_id=2";
-      $query2=mysql_query($sql2);
-      $rs2=mysql_fetch_array($query2);
-      ?>
-      <?php
-      $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");     
-      mysql_select_db('elaine');
-      mysql_query("set names utf8");
-      $sql3="select * from vote where vote_id=3";
-      $query3=mysql_query($sql3);
-      $rs3=mysql_fetch_array($query3);
-      ?>
-      <?php
-      $conn=mysql_connect("localhost","root","zyl19961020") or die("数据库连接失败");    
-      mysql_select_db('elaine');
-      mysql_query("set names utf8");
-      $sql4="select * from vote where vote_id=4";
-      $query4=mysql_query($sql4);
-      $rs4=mysql_fetch_array($query4);
-      ?> 
-      墨明棋妙 <?php echo $rs1['num'];?>票
-      流觞曲水 <?php echo $rs2['num'];?>票
-      流音千回 <?php echo $rs3['num'];?>票
-      平沙落雁 <?php echo $rs4['num'];?>票
+      <div>
+         <div style="float:left">墨明棋妙</div>
+         <div style="float:left">
+            <div class="progress progress-striped active">
+               <div class="progress-bar" role="progressbar" 
+                  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"    
+                  style="width:<?php echo round($num1,4)*100; ?>%">
+               </div>
+            </div>         
+         </div>
+         <div style="float:left"><?php echo $rs1['num'];?>票(<?php echo round($num1,4)*100; ?>%)</div>
+         <div style="float:left">
+            <div class="btn-group">
+               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                 投票者<span class="caret"></span>
+               </button>
+               <ul class="dropdown-menu" role="menu">
+                  <li><a href="#"><?php echo $rs1['name'];?></a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div style="margin-top:100px">        
+         <div style="float:left">流觞曲水</div>
+         <div style="float:left">
+            <div class="progress progress-striped active">
+               <div class="progress-bar" role="progressbar" 
+                  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"    
+                  style="width:<?php echo round($num2,4)*100; ?>%">
+               </div>
+            </div> 
+         </div>          
+         <div style="float:left"><?php echo $rs2['num'];?>票(<?php echo round($num2,4)*100; ?>%)</div>
+         <div style="float:left">
+            <div class="btn-group">
+               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                 投票者<span class="caret"></span>
+               </button>
+               <ul class="dropdown-menu" role="menu">
+                  <li><a href="#"><?php echo $rs2['name'];?></a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div style="margin-top:200px">
+         <div style="float:left">流音千回</div>
+         <div style="float:left">
+            <div class="progress progress-striped active">
+               <div class="progress-bar" role="progressbar" 
+                  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"    
+                  style="width:<?php echo round($num3,4)*100; ?>%">
+               </div>
+            </div>         
+         </div>
+         <div style="float:left"><?php echo $rs3['num'];?>票(<?php echo round($num3,4)*100; ?>%)</div>
+         <div style="float:left">
+            <div class="btn-group">
+               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                 投票者<span class="caret"></span>
+               </button>
+               <ul class="dropdown-menu" role="menu">
+                  <li><a href="#"><?php echo $rs3['name'];?></a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div style="margin-top:300px">
+         <div style="float:left">平沙落雁</div>
+         <div style="float:left">
+            <div class="progress progress-striped active">
+               <div class="progress-bar" role="progressbar" 
+                  aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"    
+                  style="width: <?php echo round($num4,4)*100; ?>%">
+               </div>
+            </div>         
+         </div>
+         <div style="float:left"><?php echo $rs4['num'];?>票(<?php echo round($num4,4)*100; ?>%)</div>
+         <div style="float:left">
+            <div class="btn-group">
+               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                 投票者<span class="caret"></span>
+               </button>
+               <ul class="dropdown-menu" role="menu">
+                  <li><a href="#"><?php echo $rs4['name'];?></a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
    </div>
    <!--<div style="float:left;margin-left:20px;">
       <img src="img/lyg.jpg" class="img-rounded" alt="Cinque Terre" width="200" height="200"><br/><br/>    

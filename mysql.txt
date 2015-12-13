@@ -4,3 +4,5 @@ create table vote(
 	vote_id int(4) not null,
 	num int(4) not null
 )default charset=utf8;
+insert into vote(vote_id,num) values(1,0);
+alter table user add vote varchar(4) not null;

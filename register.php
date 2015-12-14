@@ -20,7 +20,7 @@
 		&nbsp;确认密码:<input type="password" name="password1" class="form-control"><br/><br/>
 		&nbsp;电子邮箱:<input type="text" name="email" class="form-control"><br/><br/>      		
       &nbsp;验证码：<input type="text" name="code" class="form-control" placeholder="区分大小写" style="width:100px" >
-      <img src="code.php"><br/><br/>
+      <img src="code.php" onclick="this.src='code.php?d='+Math.random();"><br/><br/>
       <div style="text-align:center">
          <table>
             <td>
